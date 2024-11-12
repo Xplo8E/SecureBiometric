@@ -29,22 +29,29 @@
 }
 
 - (IBAction)authenticateButtonTapped:(id)sender {
+    // 1. Create LAContext instance
     LAContext *context = [[LAContext alloc] init];
     NSError *error = nil;
     
+    // 2. Check if device can use biometric authentication
     if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error]) {
+        
+        // 3. Request biometric authentication
         [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics
                 localizedReason:@"Authenticate to see the message"
                         reply:^(BOOL success, NSError *error) {
+            
+            // 4. Handle the authentication result
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (success) {
-                    self.resultLabel.text = @"Hello World!\n\n Biometric Verified!!";
+                    self.resultLabel.text = @"Hello World!";
                 } else {
                     self.resultLabel.text = @"Authentication failed";
                 }
             });
         }];
     } else {
+        // 5. Handle devices without biometric capability
         self.resultLabel.text = @"Biometric authentication not available";
     }
 }
