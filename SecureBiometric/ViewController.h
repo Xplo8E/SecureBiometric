@@ -7,6 +7,7 @@
 
 #import <UIKit/UIKit.h>
 #import <LocalAuthentication/LocalAuthentication.h>
+#import <Security/Security.h>
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *authenticateButton;
