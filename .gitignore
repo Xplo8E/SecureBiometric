@@ -1,56 +1,80 @@
-# Xcode
+# General
 .DS_Store
-*/build/*
-*.pbxuser
-!default.pbxuser
+Thumbs.db
+
+# Logs
+*.log
+
+# Android specific
+Android/.gradle/
+Android/.idea/
+Android/build/
+Android/app/build/
+Android/local.properties
+Android/*.iml
+Android/.vscode/
+Android/.settings/
+Android/.externalNativeBuild/
+Android/.cxx/
+Android/captures/
+Android/output.json
+Android/.navigator/
+
+# Android NDK
+**/obj/
+**/bin/
+**/gen/
+
+# Android Studio
+.idea/
+*.iml
+
+# Keystore files
+*.jks
+*.keystore
+
+# Flutter (if applicable)
+**/.flutter-plugins
+**/.flutter-plugins-dependencies
+**/pubspec.lock
+**/.packages
+**/build/
+
+# iOS specific
+IOS/Pods/
+IOS/build/
+IOS/DerivedData/
+IOS/*.xcworkspace
+IOS/*.xcuserdata
+IOS/*.xcuserdatad/
+IOS/*.mode1v3
+IOS/*.pbxuser
+IOS/.DS_Store
+
+# Xcode
 *.mode1v3
-!default.mode1v3
 *.mode2v3
-!default.mode2v3
 *.perspectivev3
-!default.perspectivev3
-xcuserdata
 *.xccheckout
 *.moved-aside
-DerivedData
-*.hmap
-*.ipa
 *.xcuserstate
-*.xcworkspace
-!default.xcworkspace
-
-# CocoaPods
-Pods/
-Podfile.lock
-
-# Carthage
-Carthage/Build/
-
-# fastlane
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
-
-# Code Injection
-iOSInjectionProject/
-
-# Other
-*.swp
-*.lock
-profile
-*.moved-aside
 *.xcscmblueprint
 
-# AppCode
-.idea/
+# Swift Package Manager
+.build/
+*.xcodeproj/project.xcworkspace/xcuserdata/
 
-# Obj-C/Swift specific
-*.hmap
-*.ipa
-*.dSYM.zip
-*.dSYM
+# Fastlane
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
 
-# Playgrounds
-timeline.xctimeline
-playground.xcworkspace
+# Temporary and backup files
+*.tmp
+*.swp
+*~
+
+# macOS specific
+*.DS_Store
+*.AppleDouble
+
